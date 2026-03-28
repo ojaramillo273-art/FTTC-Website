@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Funtime Time Theater Complex (FTTC)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+/* ------------------------------
+   MOBILE-FIRST BASE STYLES
+--------------------------------*/
+:root {
+  --bg-dark: #050510;
+  --bg-panel: #101020;
+  --accent-neon-pink: #ff4fd8;
+  --accent-neon-blue: #4fd8ff;
+  --accent-yellow: #ffd94f;
+  --text-main: #f5f5ff;
+  --text-muted: #b0b0d0;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: radial-gradient(circle at top, #1a1a3a 0, #050510 55%, #000 100%);
+  color: var(--text-main);
+}
+
+/* ------------------------------
+   HEADER — MOBILE FIRST
+--------------------------------*/
+header {
+  background: rgba(5,5,16,0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-bar {
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* LOGO BLOCK */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-img {
+  height: 40px;
+  width: 60px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.logo-text-main {
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.logo-text-sub {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* NAVIGATION */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+/* ------------------------------
+   HERO — MOBILE FIRST
+--------------------------------*/
+.hero {
+  padding: 1.5rem;
+}
+
+.hero-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.btn-primary, .btn-ghost {
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-neon-pink), var(--accent-neon-blue));
+  color: #050510;
+}
+
+.btn-ghost {
+  background: rgba(5,5,16,0.8);
+  color: var(--text-main);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+/* ------------------------------
+   SECTIONS & CARDS
+--------------------------------*/
+.section {
+  padding: 1.5rem;
+}
+
+.card {
+  background: var(--bg-panel);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: rgba(5,5,16,0.96);
+}
+
+/* ------------------------------
+   DESKTOP BREAKPOINT
+--------------------------------*/
+@media (min-width: 700px) {
+
+  .nav-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero, .section {
+    max-width: 1100px;
+    margin: 2rem auto;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-bar">
+
+    <!-- LOGO BLOCK -->
+    <div class="logo">
+      <img src="fttc-logo.png" class="logo-img" alt="FTTC Logo">
+      <div>
+        <div class="logo-text-main">FUNTIME TIME THEATER COMPLEX</div>
+        <div class="logo-text-sub">Headquarters · Funtime Pizza Time Theater</div>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#stages">Stages</a>
+      <a href="#performers">Performers</a>
+      <a href="#lore">Lore</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1 class="hero-title">Funtime Time Theater Complex</h1>
+  <p class="hero-subtitle">
+    The headquarters of the Funtime Pizza Time Theater universe — built for shows, stories, and second chances.
+  </p>
+  <button class="btn-primary">View Stages</button>
+  <button class="btn-ghost">Lore Archive</button>
+</section>
+
+<section id="about" class="section">
+  <h2>About the FTTC</h2>
+  <div class="card">
+    <h3>Corporate Core</h3>
+    <p>The FTTC manages scheduling, show design, safety, and universe-wide continuity.</p>
+  </div>
+  <div class="card">
+    <h3>Retro Spirit</h3>
+    <p>Neon signage, arcade culture, and pizzatainment nostalgia power the FTTC’s heart.</p>
+  </div>
+</section>
+
+<section id="stages" class="section">
+  <h2>The 6‑Stage Show</h2>
+  <div class="grid-3">
+    <div class="card"><h3>Fun Believe Band</h3><p>Nooby and the emotional core of the FTTC.</p></div>
+    <div class="card"><h3>Glitchlight Band</h3><p>guest, c00lkidd, bluudud, pr33typrincess + guest star.</p></div>
+    <div class="card"><h3>Pibby Stage</h3><p>Learning with Pibby & Bunbun.</p></div>
+    <div class="card"><h3>CEC Cyber Stage</h3><p>Cyberstars and 90s nostalgia.</p></div>
+    <div class="card"><h3>CEC News Stage</h3><p>News anywhere, anytime.</p></div>
+    <div class="card"><h3>TADC Stage</h3><p>The wackiest stage in the complex.</p></div>
+  </div>
+</section>
+
+<section id="performers" class="section">
+  <h2>Featured Performers</h2>
+  <div class="grid-3">
+    <div class="card"><h3>Nooby</h3><p>Lead vocalist.</p></div>
+    <div class="card"><h3>Rhythmix</h3><p>Beat‑keeper of the universe.</p></div>
+    <div class="card"><h3>Guest</h3><p>Redeemed glitchlight member.</p></div>
+    <div class="card"><h3>Lunara & Astar</h3><p>The Pregreeters.</p></div>
+    <div class="card"><h3>Noobsquad</h3><p>Rotating mascots & cameos.</p></div>
+    <div class="card"><h3>Engineering & Robotics</h3><p>The team behind every show.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="card">
+    <p><strong>HQ Line:</strong> (407) 852‑8665</p>
+    <p><strong>Email:</strong> pizzatimetheaterfuntime@gmail.com</p>
+    <p><strong>Location:</strong> 7839 South Dixion St, Infinite Cities, LJ 74585</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © Funtime Time Theater Complex · All shows logged in the Lore Archive.
+</footer>
+
+</body>
+</html>
